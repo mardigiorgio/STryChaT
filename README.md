@@ -1,75 +1,60 @@
-# Chat App
+# STryChaT
 
-## Introduction
-
-This repository contains a simple client-server chat application implemented in Python using sockets and threading. The application allows two users to communicate with each other over a network. The client side and server side are implemented in separate scripts: `client.py` and `server.py` respectively.
+STryChaT is a lightweight client–server chat application written in Python. It
+demonstrates basic socket programming and threading by enabling two terminals to
+exchange messages in real time.
 
 ## Features
 
-- Real-time communication between a client and a server.
-- User-friendly interface with a colorful banner.
-- Customizable alias for the client.
+- Text‑based chat between a server and a single client
+- Customisable user alias for the client
+- Colourful terminal banner (requires [`termcolor`](https://pypi.org/project/termcolor/))
 
-## Usage
+## Getting Started
 
 ### Prerequisites
 
-Make sure you have Python installed on your system.
+- Python 3.8+
+- `pip` for dependency installation
 
-### Setup
+Install the required dependency:
 
-1. **Clone the repository:**
+```bash
+pip install termcolor
+```
 
-   ```bash
-   git clone https://github.com/xdmahko/STryChaT.git
+### Running the server
 
-2. **Navigate to the project directory:**
+```bash
+python server.py
+```
 
-   ```bash
-   cd STryChaT
+The server listens on port `11111` by default and waits for a client to connect.
 
-3. **Install the required dependencies:**
+### Running the client
 
-   ```bash
-   pip install termcolor
+```bash
+python client.py
+```
 
-### Running the Server
+When prompted:
 
-1. **Open a terminal and navigate to the project directory.**
-2. **Run the server script:**
+1. Enter an alias to identify yourself in the chat.
+2. Provide the server's IP address and port (use `localhost` and `11111` if
+   running locally).
 
-   ```bash
-   python server.py
+Once connected, messages typed in the client terminal will appear on the server
+terminal and vice versa.
 
-The server will bind to the default address ('', 11111).
-3. **Wait for the server to establish a connection with a client.**
+### Exiting
 
-### Running the Client
-
-1. **Open a new terminal and navigate to the project directory.**
-2. **Run the client script:**
-
-   ```bash
-   python client.py
-
-3. **Run the client script:**
-- Enter your desired alias.
-- Provide the target server's IP address and port.
-4. **Start chatting!**
-
-## Exiting
-
-To exit the chat, type exit and press Enter in the client terminal.
-
-## Known Issues
-
-Document any known issues or limitations of the current implementation.
+Type `exit` in the client terminal to end the chat session gracefully.
 
 ## Contributing
 
-Feel free to contribute to the project by submitting bug reports, feature requests, or pull requests.
+Pull requests, bug reports and feature suggestions are welcome.
 
 ## License
 
-This project is licensed under the MIT License.
-   
+This project is released under the MIT License.
+
