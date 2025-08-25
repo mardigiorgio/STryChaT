@@ -1,6 +1,6 @@
-# STryChaT
+# socket-chat
 
-STryChaT is a lightweight client–server chat application written in Python. It
+socket-chat is a lightweight client–server chat application written in Python. It
 demonstrates basic socket programming and threading by enabling two terminals to
 exchange messages in real time.
 
