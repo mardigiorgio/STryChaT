@@ -38,25 +38,8 @@ def start(ip, port):
     thread1.join()
     thread2.join()
 
-def printBanner():
-    os.system("cls")
-    ascii_banner = """
-                                                                                         
-  _______ _______            _______ __          _______ 
- |   _   |       .----.--.--|   _   |  |--.---.-|       |
- |   1___|.|   | |   _|  |  |.  1___|     |  _  |.|   | |
- |____   `-|.  |-|__| |___  |.  |___|__|__|___._`-|.  |-'
- |:  1   | |:  |      |_____|:  1   |             |:  |  
- |::.. . | |::.|            |::.. . |             |::.|  
- `-------' `---'            `-------'             `---'  
-                                                                                                
-    """
-    print(colored(ascii_banner, "green"))
-
-
 def init():
     os.system('color')
-    printBanner()
 
     global name
     name = input("Enter your alias:")
